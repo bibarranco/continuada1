@@ -57,13 +57,13 @@ class MainActivity : AppCompatActivity() {
                 tv_secreto.visibility = View.VISIBLE
                 tv_secreto.text =
                     "A classificação do Estado de ${et_estado.text} é de flexibilização"
-                tv_secreto.setTextColor(Color.YELLOW)
+                tv_secreto.setTextColor(Color.parseColor("#EEAD2D"))
 
             } else {
                 tv_secreto.visibility = View.VISIBLE
                 tv_secreto.text =
                     "A classificação do Estado de ${et_estado.text} é de abertura parcial"
-                tv_secreto.setTextColor(Color.GREEN)
+                tv_secreto.setTextColor(Color.parseColor("#006400"))
 
             }
         }
