@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_topo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Classificação dos Estados de acordo com a quantidade de óbitos por Covid-19"
+        android:textAlignment="center"
+        android:textColor="#0E0E0E"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_segundo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Preencha os campos a seguir:"
+        android:textAlignment="center"
+        android:textColor="#0E0E0E"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tv_topo" />
+
+    <EditText
+        android:id="@+id/et_estado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Nome do Estado"
+        android:inputType="text"
+        android:textSize="17sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_segundo" />
+
+    <EditText
+        android:id="@+id/et_ultimos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Quantidade de óbitos nos últimos 7 dias"
+        android:inputType="number"
+        android:textSize="17sp"
+        app:layout_constraintTop_toBottomOf="@id/et_estado" />
+
+    <EditText
+        android:id="@+id/et_anteriores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Quantidade de óbitos nos 7 dias anteriores"
+        android:inputType="number"
+        android:textSize="17sp"
+        app:layout_constraintTop_toBottomOf="@id/et_ultimos" />
+
+    <Button
+        android:id="@+id/bt_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="calcular"
+        android:text="Verificar"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/et_anteriores" />
+
+    <TextView
+        android:id="@+id/tv_secreto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Texto secreto"
+        android:textSize="21sp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/bt_01" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
